@@ -2,11 +2,18 @@ h2 {
     color: blue;
 }
 
-.boxmodel {
+p {
+    font-size: 10px;
+}
+
+span {
+    font-size: 2rem;
+}
+/* .boxmodel {
     border: 5px solid red;
     display: inline-block;
     padding: 5px 20px 5px 20px;
     margin: 0 20px;
     width: 33px;
     height: 55px;
-}
+} */

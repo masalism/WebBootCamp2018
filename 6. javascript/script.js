@@ -271,6 +271,7 @@ var newsfeed = [
 // EXERCISE: BUILDING FACEBOOK //
 /////////////////////////////////
 
+/*
 var database = [
     {
         username: "andrei",
@@ -305,3 +306,98 @@ function signIn(user, pass) {
 }
 
 signIn(userNamePrompt, passwordPrompt);
+*/
+
+////////////////////////////
+// JAVASCRIPT TERMINOLOGY //
+////////////////////////////
+
+/*
+//function declaration //
+function newFunction() {
+
+}
+
+//function expression//
+var newFunction = function() {
+
+};
+
+//expression//
+1+3;
+var a = 2;
+return true;
+
+//calling or invoking a function//
+alert();
+newFunction(param1, param2);
+
+//asign a variable//
+var a = true;
+
+//function vs method//
+function thisIsAFunction() {
+
+}
+
+var obj = {
+    thisIsAMethod: function() {
+
+    }
+}
+
+thisIsAFunction();
+obj.thisIsAMethod();
+*/
+
+///////////
+// LOOPS //
+///////////
+
+/*
+var todos = [
+    "clean room",
+    "brush teeth",
+    "exercise",
+    "study javascript",
+    "eat healthy"
+];
+
+var todosImportant = [
+    "clean room!",
+    "brush teeth!",
+    "exercise!",
+    "study javascript!",
+    "eat healthy!"
+];
+
+var todosLength = todos.length;
+for (var i = 0; i < todosLength; i++) {
+    // todos[i] = todos[i ] + "!";
+    console.log(i);
+}
+
+function logTodos(todo, i) {
+    console.log(todo, i);
+}
+
+todos.forEach(logTodos);
+todosImportant.forEach(logTodos);
+
+var counterOne = 10;
+while(counterOne > 10) {
+    console.log(counterOne);
+    counterOne--;
+}
+
+var counterTwo = 10;
+
+do {
+    console.log(counterTwo);
+    counterTwo--;
+} while (counterTwo > 10);
+*/
+
+
+
+

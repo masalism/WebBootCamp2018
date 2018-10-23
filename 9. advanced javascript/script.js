@@ -457,6 +457,7 @@ console.log('reduce', reduceArray);
 // EXERCISE: ADVANCED ARRAYS //
 
 // Complete the below questions using this array:
+/*
 const array = [
     {
         username: "john",
@@ -484,7 +485,7 @@ const array = [
     },
 
 ];
-
+*/
 //Create an array using forEach that has all the usernames with a "!" to each of the usernames
 /*
 
@@ -553,3 +554,89 @@ console.log(answer);
 //////////////////////
 // ADVANCED OBJECTS //
 //////////////////////
+
+/*
+// reference type
+
+var object1 = { value: 10 };
+var object2 = object1; // reference
+var object3 = { value: 10 };
+
+// context vs scope
+
+const object4 = {
+    a: function() {
+        console.log(this);
+    }
+}
+
+// instantiation
+
+class Player {
+    constructor(name, type) {
+        console.log('player', this);
+        this.name = name;
+        this.type = type;
+    }
+    introduce() {
+        console.log(`Hi I am ${this.name}, I am a ${this.type}`);
+    }
+}
+
+class Wizard extends Player {
+    constructor(name, type) {
+        super(name, type); //gets access from Player constructor
+        console.log('wizard', this);
+    }
+    play() {
+        console.log(`Weeeee I am a ${this.type}`);
+    }
+}
+
+const wizard1 = new Wizard('Shelly', 'Healer');
+const wizard2 = new Wizard('Shawn', 'Dark Magic');
+
+wizard1.introduce();
+wizard2.introduce();
+wizard1.play();
+wizard2.play();
+*/
+
+// EXERCISE: ADVANCED OBJECTS //
+
+/*
+//Evaluate these:
+//#1
+//[2] === [2] //false
+//{} === {} //false
+
+//#2 what is the value of property a for each object.
+const object1 = { a: 5 }; //4
+const object2 = object1; //4
+const object3 = object2; //4
+const object4 = { a: 5}; // 5
+object1.a = 4; //4 , changes object1 from 5 to 4
+
+
+//#3 create two classes: an Animal class and a Mamal class. 
+// create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color. 
+
+class Animal {
+    constructor(name, type, color) {
+        this.name = name;
+        this.type = type;
+        this.color = color;
+    }
+}
+
+class Mamal extends Animal {
+    constructor(name, type, color) {
+        super(name, type, color);
+    }
+    sound() {
+        console.log(`Mooo, I am ${this.name} and I am a ${this.type}, my color is ${this.color}`);
+    }
+}
+
+const cow = new Mamal('Shelly', 'cow', 'black');
+*/

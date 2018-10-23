@@ -417,5 +417,139 @@ compose(add1, add5)(10)
 2. No Side Effects -->  It does not depend on any state, or data, change during a program’s execution. It must only depend on its input elements.
 */
 
+/////////////////////
+// ADVANCED ARRAYS //
+/////////////////////
+
+/*
+const array = [1, 2, 10, 16];
+
+const double = [];
+const newArray = array.forEach(num => {
+    double.push(num * 2);
+});
+
+console.log('forEach', double);
+
+// map
+
+const mapArray = array.map(num => num * 2); // SHORT
+
+console.log('map', mapArray);
+
+// filter
+
+const filterArray = array.filter(num => { // NOT SHORT
+    return num > 5;
+});
+
+console.log('filter', filterArray);
+
+// reduce
+
+const reduceArray = array.reduce((accumulator, num) => {
+    return acumulator + num;
+}, 0); //0 = acumulator
+
+console.log('reduce', reduceArray);
+*/
+
+// EXERCISE: ADVANCED ARRAYS //
+
+// Complete the below questions using this array:
+const array = [
+    {
+        username: "john",
+        team: "red",
+        score: 5,
+        items: ["ball", "book", "pen"]
+    },
+    {
+        username: "becky",
+        team: "blue",
+        score: 10,
+        items: ["tape", "backpack", "pen"]
+    },
+    {
+        username: "susy",
+        team: "red",
+        score: 55,
+        items: ["ball", "eraser", "pen"]
+    },
+    {
+        username: "tyson",
+        team: "green",
+        score: 1,
+        items: ["book", "pen"]
+    },
+
+];
+
+//Create an array using forEach that has all the usernames with a "!" to each of the usernames
+/*
+
+let users = [];
+array.forEach(user => {
+    let { username } = user; //username  from array(user);
+    username = username + "!";
+    users.push(username);
+});
+
+console.log(users);
 
 
+//Create an array using map that has all the usernames with a "?" to each of the usernames
+
+let mapUsers = array.map(user => {
+    let { username } = user;
+    return username + "?"
+});
+
+console.log(mapUsers);
+
+//Filter the array to only include users who are on team: red
+
+let userRed = array.filter(red => {
+    return red.team === "red";
+});
+
+console.log(userRed);
+
+//Find out the total score of all users using reduce
+
+let totalScore = array.reduce((acc, num) => {
+    return acc + num.score;
+}, 0); 
+
+console.log(totalScore);
+
+
+// (1), what is the value of i? = index of the array
+// (2), Make this map function pure:
+const arrayNum = [1, 2, 4, 5, 8, 9];
+const newArray = arrayNum.map((num, i) => {
+    console.log(num, i);
+    alert(num);
+    return num * 2;
+});
+
+// pure
+const arrayNum = [1, 2, 4, 5, 8, 9];
+const newArray = arrayNum.map((num, i) => {
+	return num * 2;
+});
+
+//BONUS: create a new list with all user information, but add "!" to the end of each items they own.
+
+const answer = array.map(user => {
+    user.items = user.items.map(item => { // goes to objects array
+        return item + "!"
+    });
+    return user;
+})
+console.log(answer);
+*/
+
+//////////////////////
+// ADVANCED OBJECTS //
+//////////////////////

@@ -313,3 +313,109 @@ const whereAmI = (username, location) => {
     }
 }
 */
+
+/////////////////////////
+// AVDVANCED FUNCTIONS //
+/////////////////////////
+
+// ES5
+
+/*
+function first() {
+    var greet = 'Hi';
+    function second() {
+        alert(greet);
+    }
+    return second
+}
+
+var newFunc = first();
+newFunc();
+*/
+// ES6
+
+/*
+const first = () => {
+    const greet = 'Hi';
+    const second = () => {
+        const name = 'bobby';
+        alert(greet);
+    }
+    return second
+}
+
+const newFunc = first();
+newFunc();
+
+// Closures - function ran. Te function executed. It's never goinf tu run again.
+// BUT it's going to remember that there are referenaces to those variables.
+// So the child scopealways has access to the parent scope.
+
+// Currying
+
+const multiply = (a, b) => a * b;
+const curriedMultiply = (a) => (b) => a * b;
+const multiplyBy5 = curriedMultiply(5); 
+
+// Compose
+
+const compose = (f, g) => (a) => f(g(a));
+
+const sum = (num) => num + 1;
+
+compose(sum, sum)(5);
+
+// Avoiding side effects and functional purity
+
+var a = 1;
+function b() {
+    a = 2;
+}
+*/
+
+// EXERCISE: Advanced functions
+
+//Solve these problems:
+
+//#1 Create a one line function that adds adds two parameters
+
+/*
+const oneLineFunction = (a, b) => a * b;
+
+oneLineFunction(7, 87);
+
+//Closure: What does the last line return?
+const addTo = x => y => x + y
+var addToTen = addTo(10)
+addToTen(3)
+//13
+
+//Currying: What does the last line return?
+const sum = (a, b) => a + b
+const curriedSum = (a) => (b) => a + b
+curriedSum(30)(1)
+//31
+
+
+//Currying: What does the last line return?
+const sum = (a, b) => a + b
+const curriedSum = (a) => (b) => a + b
+const add5 = curriedSum(5)
+add5(12)
+//17
+
+//Composing: What does the last line return?
+const compose = (f, g) => (a) => f(g(a));
+const add1 = (num) => num + 1;
+const add5 = (num) => num + 5;
+compose(add1, add5)(10)
+//16
+*/
+//What are the two elements of a pure function?
+/*
+1. Deterministic --> always produces the same results given the same inputs
+2. No Side Effects -->  It does not depend on any state, or data, change during a program’s execution. It must only depend on its input elements.
+*/
+
+
+

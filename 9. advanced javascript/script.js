@@ -680,3 +680,97 @@ const power100 = (num) =>num**100;
 
 power100(10000) // Infinity
 */
+
+/////////
+// ES8 //
+/////////
+
+/*
+'Turtle'.padStart(10); // leaves space 
+'Turtle'.padEnd(10);
+
+const fun = (a,
+        b,
+        c,
+        d,
+        e, // , want be an error
+        ) => {
+    console.log(a);
+}
+
+// Object.values;
+// Object.entries;
+// Object.keys;
+
+let obj = {
+    username1: 'Santa',
+    username2: 'Rudolf',
+    username3: 'Mr. Grinch'
+}
+
+
+Object.keys(obj).forEach((key, index) =>{
+    console.log(key, obj[key]);
+});
+
+
+//values
+Object.values(obj).forEach(value => {
+    console.log(value);
+});
+
+//Keys and values
+Object.entries(obj).forEach(value => {
+    console.log(value);
+});
+
+
+Object.entries(obj).map(value => {
+    return value[1] + value[0].replace('username', '');  //replaces strings
+});
+
+*/
+
+// EXERCISE: ES8 //
+
+/*
+// Solve the below problems:
+
+// #1) Line up the Turtle and the Rabbit at the start line:
+const startLine = '     ||<- Start line';
+let turtle = '🐢'.padStart(10);
+let rabbit = '🐇'.padStart(10);
+
+
+
+// it should look like this:
+'     ||<- Start line'
+'       🐢'
+'       🐇'
+
+// when you do:
+console.log(startLine);
+console.log(turtle);
+console.log(rabbit);
+
+
+// #2) What happens when you run turtle.trim().padEnd(9, '=') on the turtle variable
+// Read about what the second parameter does in padEnd and padStart? "🐢======="
+
+// #3) Get the below object to go from:
+let obj = {
+  my: 'name',
+  is: 'Rudolf',
+  the: 'raindeer'
+}
+// to this:
+'my name is Rudolf the raindeer'
+
+console.log(Object.entries(obj).map(value => value.join(" ")).join(' '));
+
+*/
+
+
+
+
+

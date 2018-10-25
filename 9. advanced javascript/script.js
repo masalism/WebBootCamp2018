@@ -770,7 +770,32 @@ console.log(Object.entries(obj).map(value => value.join(" ")).join(' '));
 
 */
 
+///////////////
+// DEBUGGING //
+///////////////
 
+/*
+// original
+const flattened = [[0, 1], [2, 3], [4, 5]].reduce((a, b) => a.concat(b), []);
+
+//debugged
+const flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+    (accumulator, array) => {
+        // console.log('array', array);
+        // console.log('accumulator', accumulator);
+        debugger;
+        return accumulator.concat(array)
+}, []);
+*/
+
+//////////////////////////
+// HOW JAVASCRIPT WORKS //
+//////////////////////////
+
+//allocate memory
+const a = 1;
+const b = 10;
+const c = 100;
 
 
 

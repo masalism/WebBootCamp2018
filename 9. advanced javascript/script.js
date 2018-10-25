@@ -791,11 +791,47 @@ const flattened = [[0, 1], [2, 3], [4, 5]].reduce(
 //////////////////////////
 // HOW JAVASCRIPT WORKS //
 //////////////////////////
+/*
+// allocate memory
 
-//allocate memory
 const a = 1;
 const b = 10;
 const c = 100;
 
+// call stack
+console.log('1');
+
+// ASYNCHRONOUS
+setTimeout(() => {
+    console.log('2');
+}, 2000);
+
+console.log('3');
+
+const one = () => {
+    const two = () => {
+        console.log('4');
+    }
+    two();
+}
+
+// console.log('4');
+// two();
+// one();
+
+
+// stack overflow
+// Recursion 
+// function foo() {
+//     foo();
+// }
+
+// foo();
+
+//CALL STACK
+//WEB API
+//CALLBACK QUEUE
+//EVENT LOOP
+*/
 
 

@@ -96,3 +96,4 @@ for (i = 0; i < listLength(); i++) {
 function removeParent(evt) {
     evt.target.parentNode.remove();
 } 
+

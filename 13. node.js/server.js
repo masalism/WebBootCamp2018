@@ -15,8 +15,17 @@
 // server.listen(3000);
 
 const express = require('express');
-
+const bodyParser = require('body-parser');
 const app = express();
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+// MIDDLEWARE
+// app.use((req, res, next) => {
+//     console.log('<h1>Hellooo</h1>');
+//     next();
+// });
 
 //GET request
 app.get('/', (req, res) => {
@@ -28,11 +37,8 @@ app.get('/profile', (req, res) => {
 });
 
 app.post('/profile', (req, res) => {
-    const user = {
-        name: 'Sally',
-        hobby: 'soccer'
-    }
-    res.send(user);
+    console.log(req.body)
+    res.send('Success');
 });
 
 app.listen(3000);
